@@ -45,30 +45,15 @@ enum
 
 #endif
 
+#define LPMOD MOD_LGUI
+#define LRMOD MOD_LALT
+#define LMMOD MOD_LSFT
+#define LIMOD MOD_LCTL
 
-#if 0
-[_QWRT] = LAYOUT(
-    _____,  KC_QUOT,           KC_COMM,           KC_DOT,            KC_P,              KC_Y,             /**/  KC_F,              KC_G,              KC_C,              KC_R,              KC_L,              _____,   \
-    _____,  MT(MOD_LGUI,KC_A), MT(MOD_LCTL,KC_O), MT(MOD_LALT,KC_E), MT(MOD_LSFT,KC_U), KC_I,             /**/  KC_D,              MT(MOD_RSFT,KC_H), MT(MOD_RALT,KC_T), MT(MOD_RCTL,KC_N), MT(MOD_RGUI,KC_S), _____,   \
-    _____,  KC_SCLN,           KC_Q,              KC_J,              KC_K,              KC_X,             /**/  KC_B,              KC_M,              KC_W,              KC_V,              KC_Z,              _____,   \
-                               _____,             _____,                                                  /**/                                        _____,             _____,                                         \
-                                                                     LT(_RISE,KC_ESC),  LT(_RISE,KC_SPC), /**/  LT(_LOWR,KC_SPC),  LT(_LOWR,KC_ENT),                                                                    \
-                                                                     KC_TAB,            LT(_RISE,KC_TAB), /**/  LT(_LOWR,KC_BSPC), KC_DEL,                                                                              \
-                                                                     KC_BSPC,           KC_GRV,           /**/  KC_LGUI,           KC_LALT                                                                              \
-),
-
-[_NVSM] = LAYOUT(
-    _____,   _____,   _____,   _____,   _____,   _____,   /**/ _____,   _____,   _____,   _____,   _____,   _____,   \
-    _____,   _____,   _____,   _____,   _____,   _____,   /**/ _____,   _____,   _____,   _____,   _____,   _____,   \
-    _____,   _____,   _____,   _____,   _____,   _____,   /**/ _____,   _____,   _____,   _____,   _____,   _____,   \
-                      _____,   _____,                     /**/                   _____,   _____,                     \
-                                        __x__,   __x__,   /**/ __x__,   __x__,                                       \
-                                        _____,   __x__,   /**/ __x__,   _____,                                       \
-                                        _____,   _____,   /**/ _____,   _____                                        \
-),
-#endif
-
-
+#define RIMOD MOD_RCTL
+#define RMMOD MOD_RSFT
+#define RRMOD MOD_RALT
+#define RPMOD MOD_RGUI
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -76,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_DVRK] = LAYOUT(
     _____,  KC_QUOT,           KC_COMM,           KC_DOT,            KC_P,              KC_Y,             /**/  KC_F,              KC_G,              KC_C,              KC_R,              KC_L,              _____,   \
-    _____,  MT(MOD_LGUI,KC_A), MT(MOD_LCTL,KC_O), MT(MOD_LALT,KC_E), MT(MOD_LSFT,KC_U), KC_I,             /**/  KC_D,              MT(MOD_RSFT,KC_H), MT(MOD_RALT,KC_T), MT(MOD_RCTL,KC_N), MT(MOD_RGUI,KC_S), _____,   \
+    _____,  MT(LPMOD,KC_A),    MT(LRMOD,KC_O),    MT(LMMOD,KC_E),    MT(LIMOD,KC_U),    KC_I,             /**/  KC_D,              MT(RIMOD,KC_H),    MT(RMMOD,KC_T),    MT(RRMOD,KC_N),    MT(RPMOD,KC_S),    _____,   \
     _____,  KC_SCLN,           KC_Q,              KC_J,              KC_K,              KC_X,             /**/  KC_B,              KC_M,              KC_W,              KC_V,              KC_Z,              _____,   \
                                _____,             _____,                                                  /**/                                        _____,             _____,                                         \
                                                                      LT(_RISE,KC_ENT),  LT(_NVSM,KC_SPC), /**/  LT(_LOWR,KC_SPC),  LT(_LOWR,KC_TAB),                                                                    \
@@ -107,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_DVRK] = LAYOUT(
     _____,  KC_QUOT,           KC_COMM,           KC_DOT,            KC_P,              KC_Y,             /**/  KC_F,              KC_G,              KC_C,              KC_R,              KC_L,              _____,   \
-    _____,  MT(MOD_LGUI,KC_A), MT(MOD_LCTL,KC_O), MT(MOD_LALT,KC_E), MT(MOD_LSFT,KC_U), KC_I,             /**/  KC_D,              MT(MOD_RSFT,KC_H), MT(MOD_RALT,KC_T), MT(MOD_RCTL,KC_N), MT(MOD_RGUI,KC_S), _____,   \
+    _____,  MT(LPMOD,KC_A),    MT(LRMOD,KC_O),    MT(LMMOD,KC_E),    MT(LIMOD,KC_U),    KC_I,             /**/  KC_D,              MT(RIMOD,KC_H),    MT(RMMOD,KC_T),    MT(RRMOD,KC_N),    MT(RPMOD,KC_S),    _____,   \
     _____,  KC_SCLN,           KC_Q,              KC_J,              KC_K,              KC_X,             /**/  KC_B,              KC_M,              KC_W,              KC_V,              KC_Z,              _____,   \
                                _____,             _____,                                                  /**/                                        _____,             _____,                                         \
                                                                      LT(_RISE,KC_ENT),  LT(_NVSM,KC_SPC), /**/  LT(_LOWR,KC_SPC),  LT(_LOWR,KC_TAB),                                                                    \
@@ -138,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_DVRK] = LAYOUT(
     _____,  KC_QUOT,           KC_COMM,           KC_DOT,            KC_P,              KC_Y,             /**/  KC_F,              KC_G,              KC_C,              KC_R,              KC_L,              _____,   \
-    _____,  MT(MOD_LGUI,KC_A), MT(MOD_LCTL,KC_O), MT(MOD_LALT,KC_E), MT(MOD_LSFT,KC_U), KC_I,             /**/  KC_D,              MT(MOD_RSFT,KC_H), MT(MOD_RALT,KC_T), MT(MOD_RCTL,KC_N), MT(MOD_RGUI,KC_S), _____,   \
+    _____,  MT(LPMOD,KC_A),    MT(LRMOD,KC_O),    MT(LMMOD,KC_E),    MT(LIMOD,KC_U),    KC_I,             /**/  KC_D,              MT(RIMOD,KC_H),    MT(RMMOD,KC_T),    MT(RRMOD,KC_N),    MT(RPMOD,KC_S),    _____,   \
     _____,  KC_SCLN,           KC_Q,              KC_J,              KC_K,              KC_X,             /**/  KC_B,              KC_M,              KC_W,              KC_V,              KC_Z,              _____,   \
                                _____,             _____,                                                  /**/                                        _____,             _____,                                         \
                                                                      LT(_NVMS,KC_ENT),  LT(_NMSM,KC_TAB), /**/  LT(_NMSM,KC_SPC),  LT(_NVMS,KC_ESC),                                                                    \
@@ -177,7 +162,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #elif NUM_AND_SYMBOLS_SCHEME == 4
 [_DVRK] = LAYOUT(
     _____,  KC_QUOT,           KC_COMM,           KC_DOT,            KC_P,              KC_Y,             /**/  KC_F,              KC_G,              KC_C,              KC_R,              KC_L,              _____,   \
-    _____,  MT(MOD_LGUI,KC_A), MT(MOD_LCTL,KC_O), MT(MOD_LALT,KC_E), MT(MOD_LSFT,KC_U), KC_I,             /**/  KC_D,              MT(MOD_RSFT,KC_H), MT(MOD_RALT,KC_T), MT(MOD_RCTL,KC_N), MT(MOD_RGUI,KC_S), _____,   \
+    _____,  MT(LPMOD,KC_A),    MT(LRMOD,KC_O),    MT(LMMOD,KC_E),    MT(LIMOD,KC_U),    KC_I,             /**/  KC_D,              MT(RIMOD,KC_H),    MT(RMMOD,KC_T),    MT(RRMOD,KC_N),    MT(RPMOD,KC_S),    _____,   \
     _____,  KC_SCLN,           KC_Q,              KC_J,              KC_K,              KC_X,             /**/  KC_B,              KC_M,              KC_W,              KC_V,              KC_Z,              _____,   \
                                _____,             _____,                                                  /**/                                        _____,             _____,                                         \
                                                                      LT(_FNNV,KC_ENT),  LT(_NMSM,KC_TAB), /**/  LT(_NMSM,KC_SPC),  LT(_FNNV,KC_SLSH),                                                                    \
@@ -218,39 +203,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 #endif
 
-
-
-#if 0
-[_MDMS] = LAYOUT(
-    _____,   _____,   _____,   _____,   _____,   _____, /**/ KC_SLSH, KC_7,    KC_8,    KC_9,    KC_ASTR, _____,   \
-    _____,   _____,   _____,   _____,   _____,   _____, /**/ KC_DOT,  KC_4,    KC_5,    KC_6,    KC_MINS, _____,   \
-    _____,   _____,   _____,   _____,   _____,   _____, /**/ KC_COMM, KC_1,    KC_2,    KC_3,    KC_PLUS, _____,   \
-                      _____,   _____,                   /**/                   _____,   _____,                     \
-                                        __x__,   __x__, /**/ KC_0,    KC_EQL,                                      \
-                                        _____,   __x__, /**/ __x__,   _____,                                       \
-                                        _____,   _____, /**/ _____,   _____                                        \
-),
-
-[_LOWR] = LAYOUT(
-    _______,_______,_______,_______,_______,KC_LBRC,            KC_RBRC, KC_P7, KC_P8,  KC_P9,  RESET,  KC_PLUS,   \
-    _______,KC_HOME,KC_PGUP,KC_PGDN,KC_END ,KC_LPRN,            KC_RPRN, KC_P4, KC_P5,  KC_P6,  KC_MINS,KC_PIPE,   \
-    _______,_______,_______,_______,_______,_______,            _______, KC_P1, KC_P2,  KC_P3,  KC_EQL, KC_UNDS,   \
-                                            _______,KC_PSCR,    _______, KC_P0,                                    \
-                                            _______,_______,    _______,_______,                                   \
-                                            _______,_______,    _______,_______,                                   \
-                                            _______,_______,    _______,_______                                    \
-),
-
-[_RISE] = LAYOUT(
-    _______,RESET,  _______,_______,_______,KC_LBRC,            KC_RBRC,_______,KC_NLCK,KC_INS, KC_SLCK,KC_MUTE,   \
-    _______,KC_LEFT,KC_UP  ,KC_DOWN,KC_RGHT,KC_LPRN,            KC_RPRN,KC_MPRV,KC_MPLY,KC_MNXT,_______,KC_VOLU,   \
-    _______,_______,_______,_______,_______,_______,            _______,_______,_______,_______,_______,KC_VOLD,   \
-                                            _______,_______,    KC_EQL, _______,                                   \
-                                            _______,_______,    _______,_______,                                   \
-                                            _______,_______,    _______,_______,                                   \
-                                            _______,_______,    _______,_______                                    \
-)
-#endif
 };
 
 
