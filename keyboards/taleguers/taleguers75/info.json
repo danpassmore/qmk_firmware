@@ -1,9 +1,13 @@
 {
     "keyboard_name": "Taleguers75",
+    "manufacturer": "Taleguers",
     "url": "",
     "maintainer": "borlopjim",
-    "width": 16.5,
-    "height": 6.5,
+    "usb": {
+        "vid": "0x8476",
+        "pid": "0x0075",
+        "device_version": "0.0.1"
+    },
     "layouts": {
         "LAYOUT": {
             "layout": [{
@@ -70,6 +74,11 @@
                     "label": "F12",
                     "x": 13,
                     "y": 0
+                },
+                {
+                    "label": "Del",
+                    "x": 15.5,
+                    "y": 2.25
                 },
                 {
                     "label": "~",
@@ -213,11 +222,6 @@
                     "x": 13.5,
                     "y": 2.25,
                     "w": 1.5
-                },
-                {
-                    "label": "Del",
-                    "x": 15.5,
-                    "y": 2.25
                 },
                 {
                     "label": "Caps Lock",
@@ -364,11 +368,6 @@
                     "y": 4.25
                 },
                 {
-                    "label": "\u2191",
-                    "x": 14.25,
-                    "y": 4.5
-                },
-                {
                     "label": "Ctrl",
                     "x": 0,
                     "y": 5.25,
@@ -410,6 +409,11 @@
                     "label": "\u2190",
                     "x": 13.25,
                     "y": 5.5
+                },
+                {
+                    "label": "\u2191",
+                    "x": 14.25,
+                    "y": 4.5
                 },
                 {
                     "label": "\u2193",
