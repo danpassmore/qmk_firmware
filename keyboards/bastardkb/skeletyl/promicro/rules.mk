@@ -2,7 +2,7 @@
 MCU = atmega32u4
 
 # Bootloader selection
-BOOTLOADER = atmel-dfu
+BOOTLOADER = caterina 
 
 # Build Options
 #   change yes to no to disable
@@ -22,6 +22,8 @@ RGB_MATRIX_SUPPORTED = no   # RGB matrix is supported and enabled by default
 RGBLIGHT_SUPPORTED = no     # RGB underglow is supported, but not enabled by default
 RGB_MATRIX_ENABLE = no      # Enable keyboard RGB matrix (do not use together with RGBLIGHT_ENABLE)
 RGB_MATRIX_DRIVER = WS2812  # RGB matrix driver support
+
+COMBO_ENABLE = yes
 
 SPLIT_KEYBOARD = yes
 LAYOUTS = split_3x5_3
